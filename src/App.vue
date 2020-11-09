@@ -30,6 +30,18 @@ export default {
   },
   methods: {
     createComment() {
+      axios.post(
+        'https://kaitotamura.github.io/vuejs-http/',
+         {
+             name: this.name,
+             comment: this.comment
+         })
+        .then(response => {
+          console.log(response);
+        })
+        .catch(error => {
+          console.log(error);
+        });
         this.name="";
         this.comment="";
     }
