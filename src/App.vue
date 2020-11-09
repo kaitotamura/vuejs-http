@@ -30,7 +30,8 @@ export default {
   },
   methods: {
     createComment() {
-      axios.post();
+        this.name="";
+        this.comment="";
     }
   }
 };
